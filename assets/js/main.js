@@ -5,7 +5,7 @@ const suspectsArray = [
         occupation: 'Entrepreneur',
         age: "45",
         description: "He has a lot of connections",
-        image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+        image: "https://cdn2.vectorstock.com/i/1000x1000/47/66/business-man-entrepreneur-vector-17124766.jpg",
         color: "green"
     },
     {
@@ -14,7 +14,7 @@ const suspectsArray = [
         occupation: "Scientist",
         age: "26",
         description: "PhD in plant toxicology. Adopted daughter of Mr.Boddy",
-        image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+        image: "https://365psd.com/images/previews/1e9/male-doctor-vector-character-with-case-25855.jpg",
         color: "white"
     },
     {
@@ -23,7 +23,7 @@ const suspectsArray = [
         occupation: "Designer",
         age: "22",
         description: "Billionaire video game designer",
-        image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
+        image: "https://cdn5.vectorstock.com/i/1000x1000/83/04/a-caucasian-game-designer-in-vr-headset-vector-21198304.jpg",
         color: "purple"
     },
     {
@@ -32,7 +32,7 @@ const suspectsArray = [
         occupation: "Actress",
         age: "31",
         description: "She is an A - list movie star with a dark past",
-        image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
+        image: "https://cdn.pixabay.com/photo/2016/03/31/20/19/actress-1295681_960_720.png",
         color: "red"
     },
     {
@@ -41,7 +41,7 @@ const suspectsArray = [
         occupation: "Socialité",
         age: "36",
         description: "She is from a wealthy family and uses her status and money to earn popularity",
-        image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+        image: "https://thumbs.dreamstime.com/b/brunette-rich-successful-business-woman-beautiful-young-under-falling-money-rain-shower-49698055.jpg",
         color: "blue"
     },
     {
@@ -50,11 +50,10 @@ const suspectsArray = [
         occupation: "Retired Football player",
         age: "62",
         description: "He is a former football player who tries to get by on his former glory",
-        image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
+        image: "https://image.freepik.com/free-vector/online-male-personal-trainer_23-2148564216.jpg",
         color: "yellow"
     }
 ];
-
 
 const weaponsArray = [
     {
@@ -114,16 +113,10 @@ const roomsArray = [
     { name: "Patio" }
 ];
 
-
 //pick random cards from decks
 function selectRandom(array) {
     return array[Math.floor(Math.random() * array.length)]
 }
-
-// console.log(selectRandom(suspectsArray))
-// console.log(selectRandom(weaponsArray))
-// console.log(selectRandom(roomsArray))
-
 
 function pickMystery() {
     console.log("pick works")
@@ -137,17 +130,13 @@ function pickMystery() {
 }
 let revealed = pickMystery();
 
-
-function revealMistery(mystery) {
-    return document.getElementById("result").innerHTML =
+function revealMistery() {
+    document.getElementById("result").innerHTML =
     `
     ${revealed.suspect.firstName} 
     ${revealed.suspect.lastName}
     killed Mr. Boddy using the ${revealed.weapon.name}
     in the ${revealed.room.name}
-    <img id="img" src="${revealed.suspect.image}" alt="">
+    <img src="${revealed.suspect.image}" alt="">
     `
 }
-
-console.log(revealMistery())
-
